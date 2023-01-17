@@ -15,7 +15,7 @@ public class ServiceStation {
     }
     public void doMaintenance() {
         Transport transport = transportQueue.poll();
-//        for (Transport transport1 : transportQueue)
+        for (Transport transport1 : transportQueue)
         if (transport != null) {
             transport.getMechanics().get(0).doMaintenance();
         }

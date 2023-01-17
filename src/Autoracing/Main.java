@@ -58,47 +58,49 @@ public class Main {
         mechanics.add(mechanic4);
         mechanics.forEach(System.out::println);
 
-//        car1.defineMechanicForTransport(mechanic1);
-//        car2.defineMechanicForTransport(mechanic1);
-//        car3.defineMechanicForTransport(mechanic1);
-//        car4.defineMechanicForTransport(mechanic4);
-//        truck1.defineMechanicForTransport(mechanic3);
-//        truck2.defineMechanicForTransport(mechanic3);
-//        truck3.defineMechanicForTransport(mechanic3);
-//        truck4.defineMechanicForTransport(mechanic4);
-//        bus1.defineMechanicForTransport(mechanic2);
-//        bus2.defineMechanicForTransport(mechanic2);
-//        bus3.defineMechanicForTransport(mechanic2);
-//        bus4.defineMechanicForTransport(mechanic4);
+        car1.defineMechanicForTransport(mechanic1);
+        car2.defineMechanicForTransport(mechanic1);
+        car3.defineMechanicForTransport(mechanic1);
+        car4.defineMechanicForTransport(mechanic4);
+        truck1.defineMechanicForTransport(mechanic3);
+        truck2.defineMechanicForTransport(mechanic3);
+        truck3.defineMechanicForTransport(mechanic3);
+        truck4.defineMechanicForTransport(mechanic4);
+        bus1.defineMechanicForTransport(mechanic2);
+        bus2.defineMechanicForTransport(mechanic2);
+        bus3.defineMechanicForTransport(mechanic2);
+        bus4.defineMechanicForTransport(mechanic4);
 
-        Map<Transport, Mechanic> transportMechanicMap = new HashMap<>();
-        transportMechanicMap.put(car1, mechanic1);
-        transportMechanicMap.put(car2, mechanic1);
-        transportMechanicMap.put(car3, mechanic1);
-        transportMechanicMap.put(car4, mechanic4);
-        transportMechanicMap.put(bus1, mechanic2);
-        transportMechanicMap.put(bus2, mechanic2);
-        transportMechanicMap.put(bus3, mechanic4);
-        transportMechanicMap.put(bus4, mechanic2);
-        transportMechanicMap.put(truck1, mechanic4);
-        transportMechanicMap.put(truck2, mechanic3);
-        transportMechanicMap.put(truck3, mechanic3);
-        transportMechanicMap.put(truck4, mechanic3);
-        transportMechanicMap.put(truck2, mechanic3);
-        transportMechanicMap.put(truck2, mechanic3);
-        for (Map.Entry<Transport, Mechanic> map : transportMechanicMap.entrySet()) {
-            System.out.println(map.getKey() + " : " + map.getValue());
-        }
+//        Map<Transport, Mechanic> transportMechanicMap = new HashMap<>();
+//        transportMechanicMap.put(car1, mechanic1);
+//        transportMechanicMap.put(car2, mechanic1);
+//        transportMechanicMap.put(car3, mechanic1);
+//        transportMechanicMap.put(car4, mechanic4);
+//        transportMechanicMap.put(bus1, mechanic2);
+//        transportMechanicMap.put(bus2, mechanic2);
+//        transportMechanicMap.put(bus3, mechanic4);
+//        transportMechanicMap.put(bus4, mechanic2);
+//        transportMechanicMap.put(truck1, mechanic4);
+//        transportMechanicMap.put(truck2, mechanic3);
+//        transportMechanicMap.put(truck3, mechanic3);
+//        transportMechanicMap.put(truck4, mechanic3);
+//        transportMechanicMap.put(truck2, mechanic3);
+//        transportMechanicMap.put(truck2, mechanic3);
+//        for (Map.Entry<Transport, Mechanic> map : transportMechanicMap.entrySet()) {
+//            System.out.println(map.getKey() + " : " + map.getValue());
+//        }
 
 //        System.out.println(car4.getMechanics());
-//
-//        ServiceStation serviceStation = new ServiceStation();
-//        serviceStation.addTransportToQueue(car1);
-//        serviceStation.addTransportToQueue(bus3);
-//        serviceStation.addTransportToQueue(truck4);
-//        serviceStation.doMaintenance();
-//        serviceStation.doMaintenance();
-//        serviceStation.doMaintenance();
+
+        ServiceStation serviceStation = new ServiceStation();
+        serviceStation.addTransportToQueue(car1);
+        serviceStation.addTransportToQueue(bus3);
+        serviceStation.addTransportToQueue(truck4);
+        serviceStation.addTransportToQueue(car3);
+        serviceStation.addTransportToQueue(truck2);
+        serviceStation.addTransportToQueue(car4);
+        serviceStation.doMaintenance();
+
 
     }
 }
