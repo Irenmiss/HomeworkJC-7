@@ -1,9 +1,6 @@
 package Autoracing;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -52,24 +49,38 @@ public class Main {
         Mechanic mechanic2 = new Mechanic("Шпунтик Ш.Ш.", "Авто-Сервис", Mechanic.MechanicSpecializations.SPECIALIZATION_BUS);
         Mechanic mechanic3 = new Mechanic("Ломастер Н.Н", "Супер-Ремонт", Mechanic.MechanicSpecializations.SPECIALIZATION_TRUCK);
         Mechanic mechanic4 = new Mechanic("Всёумейкин К.К.", "Техпомощь", Mechanic.MechanicSpecializations.SPECIALIZATION_UNIVERSAL);
-        mechanics.add(mechanic1);
-        mechanics.add(mechanic2);
-        mechanics.add(mechanic3);
-        mechanics.add(mechanic4);
-        mechanics.forEach(System.out::println);
 
-        car1.defineMechanicForTransport(mechanic1);
-        car2.defineMechanicForTransport(mechanic1);
-        car3.defineMechanicForTransport(mechanic1);
-        car4.defineMechanicForTransport(mechanic4);
-        truck1.defineMechanicForTransport(mechanic3);
-        truck2.defineMechanicForTransport(mechanic3);
-        truck3.defineMechanicForTransport(mechanic3);
-        truck4.defineMechanicForTransport(mechanic4);
-        bus1.defineMechanicForTransport(mechanic2);
-        bus2.defineMechanicForTransport(mechanic2);
-        bus3.defineMechanicForTransport(mechanic2);
-        bus4.defineMechanicForTransport(mechanic4);
+        Set<Mechanic> mechanicsSet = new HashSet<>();
+        mechanicsSet.add(mechanic1);
+        mechanicsSet.add(mechanic2);
+        mechanicsSet.add(mechanic3);
+        mechanicsSet.add(mechanic3);
+        mechanicsSet.add(mechanic3);
+        mechanicsSet.add(mechanic4);
+        Iterator<Mechanic> iterator = mechanicsSet.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+//        mechanics.add(mechanic1);
+//        mechanics.add(mechanic2);
+//        mechanics.add(mechanic3);
+//        mechanics.add(mechanic4);
+//        mechanics.forEach(System.out::println);
+
+//        car1.defineMechanicForTransport(mechanic1);
+//        car2.defineMechanicForTransport(mechanic1);
+//        car3.defineMechanicForTransport(mechanic1);
+//        car4.defineMechanicForTransport(mechanic4);
+//        truck1.defineMechanicForTransport(mechanic3);
+//        truck2.defineMechanicForTransport(mechanic3);
+//        truck3.defineMechanicForTransport(mechanic3);
+//        truck4.defineMechanicForTransport(mechanic4);
+//        bus1.defineMechanicForTransport(mechanic2);
+//        bus2.defineMechanicForTransport(mechanic2);
+//        bus3.defineMechanicForTransport(mechanic2);
+//        bus4.defineMechanicForTransport(mechanic4);
+
 
 //        Map<Transport, Mechanic> transportMechanicMap = new HashMap<>();
 //        transportMechanicMap.put(car1, mechanic1);
@@ -91,16 +102,16 @@ public class Main {
 //        }
 
 //        System.out.println(car4.getMechanics());
-
-        ServiceStation serviceStation = new ServiceStation();
-        serviceStation.addTransportToQueue(car1);
-        serviceStation.addTransportToQueue(bus3);
-        serviceStation.addTransportToQueue(truck4);
-        serviceStation.addTransportToQueue(car3);
-        serviceStation.addTransportToQueue(truck2);
-        serviceStation.addTransportToQueue(car4);
-        serviceStation.doMaintenance();
-
+//
+//        ServiceStation serviceStation = new ServiceStation();
+//        serviceStation.addTransportToQueue(car1);
+//        serviceStation.addTransportToQueue(bus3);
+//        serviceStation.addTransportToQueue(truck4);
+//        serviceStation.addTransportToQueue(car3);
+//        serviceStation.addTransportToQueue(truck2);
+//        serviceStation.addTransportToQueue(car4);
+//        serviceStation.doMaintenance();
+//
 
     }
 }
